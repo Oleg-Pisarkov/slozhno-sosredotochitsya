@@ -1,5 +1,81 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  background-image: var(--background-image);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  color: var(--main-text-color);
+  padding: 10px;
+  font-size: 18px;
+  line-height: 130%;
+  
+}
+.header {
+  display: grid;
+  grid-template-rows: auto max-content auto;
+  align-items: center;
+  
+  
+
+}
+
+.header__theme-menu {
+justify-self: end;
+margin-top: 75px;
+
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.header__theme-menu-button {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
+  padding: 0px 13px;
+  border: none;
+  color: var(--title-decor);
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.header__theme-menu-button_active {
+  outline: 1px solid var(--title-decor);
+  pointer-events: none;
+}
+
+.header__title-container {
+  display: flex;
+  flex-direction: column;
+  gap: 55px;
+
+}
+
+.header__title {
+  font-weight: 700;
+  font-size: clamp(7.25rem, 5.8902rem + 6.1286vw, 9.8125rem);
+  line-height: 83%;
+  color: var(--title-color);
+  text-shadow: 4px 4px 0  var(--title-decor);
+  
+}
+
+.header__subtitle {
+  font-weight: 700;
+font-size: 18px;
+line-height: 130%;
+
+}
+
+
+
+.title-decor {
+  
+  color: var(--bg-color);
+  background-color: var(--title-decor);
 }

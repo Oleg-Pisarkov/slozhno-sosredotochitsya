@@ -1,8 +1,17 @@
-/*
-  Специально для светлой темы при наличии класса.
-  Здесь окажутся стили, которые нужно переопределить принудительно,
-  переключая тему
-*/
+:root .theme_light {
+
+--bg-color: #fff1f7;
+--main-text-color: #353430;
+--background-image: url(../images/cover-image-light.png);
+--title-color: #ffc2e6;
+--title-shadow: #ff0070; 
+--article-title-color: var(--main-text-color); 
+--article-title-bg: #ff8dcb;
+--section-title-color: var(--main-text-color); 
+
+}
+
+
 
 .page.theme_light {
   /* сохраните этот селектор в приведённом виде.
