@@ -14,33 +14,77 @@
   
 }
 .header {
+  position: relative;
   block-size: 100vh;
   min-block-size: 668px;
   display: grid;
-  grid-template-rows: auto max-content auto;
-  align-items: center;
+  grid-template-rows:  auto max-content auto;
   
-  
+}
+
+.decorated-zone::before {
+  content: "";
+  position: absolute;
+  inset-inline-end: 0;
+  inset-block-start: 0;
+  border-right: 1px solid var(--title-decor);
+  border-top: 1px solid var(--title-decor);
+  inline-size: 25px;
+  block-size: 24px;
+}
+.decorated-zone::after {
+  content: "";
+  position: absolute;
+  inset-block-end: 20px;
+  border-left: 1px solid var(--title-decor);
+  border-bottom: 1px solid var(--title-decor);
+  inline-size: 25px;
+  block-size: 24px;
 
 }
 
+.decorative-rec {
+  position: absolute;
+  top: 0px;
+  right: 28px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 139%;
+  text-align: end;
+  color: var(--title-decor);
+  
+}
+
+.decorative-rec::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  right: -19px;
+  inline-size: 9px;
+  block-size: 9px;
+  border-radius: 100%;
+  background-color: var(--title-decor);
+  box-shadow: 0 0 4px 2px var(--title-decor);
+}
+
+
 .header__theme-menu {
 justify-self: end;
-margin-block-start: 28px;
+margin-block-start: 65px;
 
 }
 
 .header__theme-menu-list {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 13px;
 }
 
 .header__theme-menu-button {
   font-weight: 400;
   font-size: 18px;
   line-height: 100%;
-  padding: 0px 13px;
+  padding: 2px 13px;
   border: none;
   color: var(--title-decor);
   background-color: transparent;
@@ -56,7 +100,9 @@ margin-block-start: 28px;
   display: flex;
   flex-direction: column;
   gap: 55px;
-  padding-block-start: 36px;
+  margin-block-end: 10px;
+  
+  
 
 }
 
@@ -86,6 +132,13 @@ line-height: 130%;
   background-color: var(--title-decor);
 }
 
+.section {
+  margin-block-end: 50px;
+
+
+}
+
+
 .section__title {
   color: var(--title-decor);
   font-weight: 700;
@@ -98,13 +151,66 @@ line-height: 130%;
 .section__article-title {
 margin-block-end: 10px;
 }
+.section__images .section__article-title {
+  margin-block-end: 0px;
+
+}
+
+
+.section__article-title-list {
+  font-weight: 400;
+  margin-block: 20px 10px;
+}
 
 .section__article-text {
 
+}
+
+
+
+.section__article-item {
+  margin-block-end: 20px;
+  
 }
 
 .text-link {
   text-decoration: none;
   text-shadow: 2px 1px 0  var(--title-decor) ;
   border-block-end: 1px solid var(--main-text-color);
+}
+
+.section__images {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+
+}
+
+.images {
+  inline-size: 100%;
+  
+}
+
+.footer {
+  margin-block-start: 50px;
+  position: relative;
+  
+  
+
+
+
+}
+
+.footer__title {
+  font-weight: 700;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: 83%;
+  color: var(--title-color);
+  text-shadow: 2px 2px 0  var(--title-decor);
+  padding-block: 278px 295px;
+  margin-inline-start: 4px;
+  
+
+  
 }
