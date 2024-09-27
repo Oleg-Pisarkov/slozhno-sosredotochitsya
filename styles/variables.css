@@ -9,7 +9,9 @@
   --background-image: url(../images/cover-image-dark.png);
   --title-color: #db00ff;
   --title-decor: #ff0070;
-  --article-title-color: #000028;
+  --title-shadow: #ff0070;
+  --article-title-color: #ff0070;
+  --article-title-bg: var(--title-shadow);
   --section-title-color: #db00ff;
   
  
