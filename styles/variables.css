@@ -1,10 +1,8 @@
-/*
-  Переменные для вашего проекта
-  и их переопределение под различные устройства
-*/
+
 :root {
   --font-family: "IBM Plex Mono";
   --bg-color: #000028;
+  --background-color: #000028;
   --main-text-color: #f1b2ce;
   --background-image: url(../images/cover-image-dark.png);
   --title-color: #db00ff;

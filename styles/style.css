@@ -1,36 +1,22 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  
   color: var(--main-text-color);
   font-family: var(--font-family), sans-serif;
   font-size: 18px;
   line-height: 130%;
+  background-color: var(--background-color);
   background-image: var(--background-image);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-  
-}
-
-@media (min-width: 768px) {
-  .page {
-    padding: px ;
-  }
-}
-
-@media (min-width: 1024px) {
-  .page {
-    padding: px ;
-  }
 }
 
 .header {
-  padding: 10px 10px 0px;
   position: relative;
   display: grid;
   grid-template-rows:  auto max-content auto;
+  padding: 10px 10px 0px;
   block-size: 100vh;
   min-block-size: 668px;
   
@@ -38,17 +24,19 @@
 
 @media (min-width: 768px) {
   .header {
-  margin-block-end: 40px;
-  block-size: 100vh;
-  min-block-size: 1004px;
+    margin-block-end: 60px;
+    padding: 20px 20px 0px;
+    block-size: 100vh;
+    min-block-size: 1004px;
   }
 }
 
 @media (min-width: 1024px) {
   .header {
-  margin-block-end: 40px;
-  block-size: 100vh;
-  min-block-size: 768px;
+    margin-block-end: 60px;
+    padding: 20px 20px 0px;
+    block-size: 100vh;
+    min-block-size: 768px;
   }
 }
 
@@ -63,7 +51,6 @@
   block-size: 24px;
 }
 
-
 .decorated-zone::after {
   content: "";
   position: absolute;
@@ -73,22 +60,31 @@
   inset-inline-start: 10px;
   inline-size: 25px;
   block-size: 24px;
-
 }
 
 @media (min-width: 768px) {
   .decorated-zone::after {
+    content: "";
+    position: absolute;
+    border-bottom: 1px solid var(--article-title-color);
+    border-left: 1px solid var(--article-title-color);
+    inset-block-end: 20px;
+    inset-inline-start: 20px;
+    inline-size: 25px;
+    block-size: 24px;
+}
+
+.decorated-zone::before {
   content: "";
   position: absolute;
-  border-bottom: 1px solid var(--article-title-color);
-  border-left: 1px solid var(--article-title-color);
-  inset-block-end: 40px;
+  border-top: 1px solid var(--article-title-color);
+  border-right: 1px solid var(--article-title-color);
+  inset-inline-end: 20px;
+  inset-block-start: 20px;
   inline-size: 25px;
   block-size: 24px;
-
 }
 }
-
 
 .decorative-rec {
   position: absolute;
@@ -106,6 +102,19 @@
   .decorative-rec {
     display: none;
   }
+}
+
+@media (min-width: 768px) {
+  .decorative-rec {
+    position: absolute;
+    top: 20px;
+    right: 48px;
+    color: var(--title-decor);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 139%;
+    text-align: end;
+  }
 
 }
 
@@ -121,15 +130,11 @@
   block-size: 9px;
 }
 
-
-
-
 .header__theme-menu {
-justify-self: end;
-padding-block-start: 65px;
-color: var(--article-title-color) ;
-
-}
+  justify-self: end;
+  padding-block-start: 65px;
+  color: var(--article-title-color) ;
+  }
 
 @media (min-width: 768px) {
   .header__theme-menu {
@@ -139,8 +144,8 @@ color: var(--article-title-color) ;
 
 @media (min-width: 1024px) {
   .header__theme-menu {
-  justify-self: center;
-  margin: 0px;
+    justify-self: center;
+    padding: 0px;
   }
 }
 
@@ -152,12 +157,10 @@ color: var(--article-title-color) ;
 
 @media (min-width: 1024px) {
   .header__theme-menu-list {
-  display: flex;
-  flex-direction: row;
-  gap: 13px;
+    display: flex;
+    flex-direction: row;
+    gap: 13px;
 }
-  
-
 }
 
 .header__theme-menu-button {
@@ -178,40 +181,30 @@ color: var(--article-title-color) ;
 
 .header__theme-menu-button:focus {
   outline: none;
-
 }
 
 .header__theme-menu-button:focus-visible {
   border-block-end: 1px solid var(--article-title-color);
-  
-  
 }
-
 
 .header__title-container {
   display: flex;
   flex-direction: column;
   gap: 55px;
-  
-  
 }
 
 @media (min-width: 768px) {
   .header__title-container {
     gap: 162px;
-    padding-block-end: 25px;
-    
+    padding-block-end: 8px;
   }
-
 }
 
 @media (min-width: 1024px) {
   .header__title-container {
     gap: 114px;
-    padding-block-start: 144px;
-    
+    padding-block-start: 149px;  
   }
-
 }
 
 .header__title {
@@ -219,8 +212,7 @@ color: var(--article-title-color) ;
   font-weight: 700;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   line-height: 83%;
-  text-shadow: 4px 4px 0  var(--title-decor);
-  
+  text-shadow: 4px 4px 0  var(--title-decor); 
 }
 
 @media (min-width: 768px) {
@@ -228,7 +220,6 @@ color: var(--article-title-color) ;
     margin-inline-start: -20px;
     font-size:clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem); 
   }
-
 }
 
 @media (min-width: 1024px) {
@@ -236,13 +227,12 @@ color: var(--article-title-color) ;
     margin-inline-start: -20px;
     font-size:clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem); 
   }
-
 }
-.header__subtitle {
-font-weight: 700;
-font-size: 18px;
-line-height: 130%;
 
+.header__subtitle {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 130%;
 }
 
 @media (min-width: 768px) {
@@ -250,16 +240,7 @@ line-height: 130%;
     align-self: end;
     width: 50%;
   }
-
 }
-
-@media (min-width: 1024px) {
-  .header__subtitle {
-    margin-block-start: px;
-  }
-
-}
-
 
 .title-decor {
   color: var(--bg-color);
@@ -272,7 +253,6 @@ line-height: 130%;
 .section {
   margin-block-end: 50px;
   padding: 0px 10px;
-
 }
 
 @media (min-width: 768px) {
@@ -280,13 +260,14 @@ line-height: 130%;
     display: flex;
     gap: 20px;
     margin-block-end: 0px;
+    padding: 0px 20px;
   }
+
  .section:nth-child(2) {
-  display: block;
-  margin-block-start: 60px;
-  margin-block-end: 80px;
+    display: block;
+    margin-block-start: 60px;
+    margin-block-end: 80px;
  }
-  
  }
 
  @media (min-width: 1024px) {
@@ -294,22 +275,19 @@ line-height: 130%;
     display: flex;
     gap: 20px;
     margin-block-end: 0px;
+    padding: 0px 20px;
   }
   
   .section:nth-child(2) .section__article-list {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
-    
   }
+
   .section:nth-child(2) {
     margin-block-end: 60px;
-
   }
-
  }
-
-
 
 .section__title {
   margin-block-start: 40px;
@@ -322,51 +300,43 @@ line-height: 130%;
 
 @media (min-width: 768px) {
   .section__title {
-  min-width: 236px;
-  margin-block-start: 0px;
-  padding-block-end: 0px;
- 
+    min-width: 236px;
+    margin-block-start: 0px;
+    padding-block-end: 0px;
   }
 
   .section:nth-child(2) .section__title {
     width: 236px;
     margin-block-end: 20px;
   }
-  
 }
 
 @media (min-width: 1024px) {
   .section__title {
-  min-width: 314px;
- 
+    min-width: 314px;
   }
 }
+
 .section__article-title {
-margin-block-end: 10px;
+  margin-block-end: 10px;
 }
-
-
 
 .section__article-title-list {
   margin-block: 20px 10px;
   font-weight: 400;
 }
 
-
 .section__article-item {
   margin-block-end: 20px;
-  
 }
 
 .text-link {
   text-decoration: none;
   text-shadow: 2px 1px 0  var(--title-decor) ;
-  
 }
 
 .text-link:hover {
   border-block-end: 1px solid var(--main-text-color);
-
 }
 
 .text-link:focus {
@@ -383,8 +353,15 @@ margin-block-end: 10px;
 
 @media (min-width: 768px) {
   .section__images {
-   margin-block-start: 60px;
+    margin-block-start: 60px;
+    padding: 0px 20px;
   }  
+}
+
+@media (min-width: 1024px) {
+  .section__images {
+    padding: 0px 20px;
+   }  
 }
 
  .pictures {
@@ -399,7 +376,6 @@ margin-block-end: 10px;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
     margin-block-start: 20px;
-    margin-block-end: 30px;  
   }  
 }
 
@@ -438,7 +414,6 @@ margin-block-end: 10px;
 }
 
 .footer {
-  
   margin-block-start: 39px;
   block-size: 100vh;
   min-block-size: 668px;
@@ -446,22 +421,19 @@ margin-block-end: 10px;
 
 .decorated-zone {
   position: relative;
-
 }
 
 @media (min-width: 768px) {
   .footer {
-  margin-block-start: 80px;
-  min-block-size: 1024px;
+    margin-block-start: 59px; 
+    min-block-size: 1024px;
   }
 }
 
-
 @media (min-width: 1024px) {
   .footer {
-  min-block-size: 768px;
+    min-block-size: 768px;
   }
-
 }
 
 .footer__title {
@@ -475,18 +447,17 @@ margin-block-end: 10px;
 }
 
 @media (min-width: 768px) {
-  
   .footer__title {
-    padding-block-start: 444px;
+    margin-inline-end: 15px;
+    padding-block-start: 464px;
     font-size:clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     text-align: center;
   }
 }
 
 @media (min-width: 1024px) {
-  
   .footer__title {
-    padding-block-start: 300px;
+    padding-block-start: 320px;
     font-size:clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 }
