@@ -1,7 +1,7 @@
 
 .page.theme_dark {
-  --font-family: "IBM Plex Mono";
   --bg-color: #000028;
+  --border-color: rgba(255, 0, 112, 0.4);
   --background-color: #000028;
   --main-text-color: #f1b2ce;
   --background-image: url(../images/cover-image-dark.png);
