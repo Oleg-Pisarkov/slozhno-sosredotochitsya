@@ -13,6 +13,10 @@
   --section-title-color: var(--main-text-color);
 }
 
+.page.theme_light .decorative-rec {
+  display: none;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     --bg-color: #353430;
@@ -26,8 +30,5 @@
     --article-title-color: #353430;
     --article-title-bg: #ff8dcb;
     --section-title-color: var(--main-text-color);
-  }
-  .decorative-rec {
-    display: none;
   }
 }

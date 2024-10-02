@@ -146,6 +146,7 @@
 .header__theme-menu-button_active {
   outline: 1px solid currentColor;
   pointer-events: none;
+  padding-block-end: 4px;
 }
 
 .header__theme-menu-button:focus {
@@ -292,7 +293,7 @@
 
 .text-link {
   text-decoration: none;
-  text-shadow: 2px 1px 0  var(--title-decor) ;
+  text-shadow: 2px 2px 0  var(--title-decor) ;
 }
 
 .text-link:hover {
