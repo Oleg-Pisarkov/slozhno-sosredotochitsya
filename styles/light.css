@@ -31,4 +31,8 @@
     --article-title-bg: #ff8dcb;
     --section-title-color: var(--main-text-color);
   }
+
+  .page.theme_auto .decorative-rec {
+    display: none;
+  }
 }
